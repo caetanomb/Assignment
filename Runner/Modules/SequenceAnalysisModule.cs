@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Runner
+namespace Runner.Modules
 {
     public class SequenceAnalysisModule : IModule
     {
@@ -16,7 +16,7 @@ namespace Runner
 
         public void Execute()
         {
-            Console.WriteLine("Informe a string value");
+            Console.WriteLine("Informe a text");
 
             var stringContent = Console.ReadLine();
 

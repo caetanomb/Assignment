@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Runner
+namespace Runner.Modules
 {
     public class SumOfMultipleModule : IModule
     {
@@ -16,11 +16,11 @@ namespace Runner
 
         public void Execute()
         {
-            Console.WriteLine("Informe a limit value");
+            Console.WriteLine("Informe a limit");
 
             if (!long.TryParse(Console.ReadLine(), out var limit))
             {
-                Console.WriteLine("WARNING - Invalid informed value");
+                Console.WriteLine("WARNING - Invalid value");
                 return;
             }
 
