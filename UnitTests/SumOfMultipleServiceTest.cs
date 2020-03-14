@@ -7,7 +7,7 @@ using Xunit;
 
 namespace UnitTests
 {
-    public class SumOfMultipleTests
+    public class SumOfMultipleServiceTest
     {        
         [Theory]
         [InlineData(15, new[] { 3, 6, 9, 12, 15, 5, 10})] //15

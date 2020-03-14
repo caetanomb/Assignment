@@ -1,31 +1,31 @@
 ﻿using Application;
 using SequenceAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Runner.Modules
 {
     public class SequenceAnalysisModule : IModule
     {
         private readonly IFindUpperCaseWords _findUpperCaseWords;
-        public SequenceAnalysisModule(IFindUpperCaseWords findUpperCaseWords)
+        private readonly IPresenter _presentation;
+        public SequenceAnalysisModule(IFindUpperCaseWords findUpperCaseWords,
+            IPresenter presentation)
         {
             _findUpperCaseWords = findUpperCaseWords;
+            _presentation = presentation;
         }
 
         public void Execute()
         {
-            Console.WriteLine("Informe a text");
+            _presentation.ShowText("Informe a text");
 
-            var stringContent = Console.ReadLine();
-
+            var stringContent = _presentation.FetchInput();
+    
             var result = 
                 _findUpperCaseWords
                 .Handle(stringContent)
                 .OrderBy();
 
-            Console.WriteLine($"Output: {result}");
+            _presentation.ShowText($"Output: {result}");
         }
     }
 }

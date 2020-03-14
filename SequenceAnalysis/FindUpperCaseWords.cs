@@ -13,7 +13,6 @@ namespace SequenceAnalysis
 
             var words = input.Split(' ');
 
-            //Act
             foreach (var item in words)
             {
                 if (item.Any(a => !char.IsUpper(a)))

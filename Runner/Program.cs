@@ -6,8 +6,7 @@ namespace Runner
     {
         static void Main(string[] args)
         {
-            var serviceProvider = StartUp.ConfigureServices();
-            ModuleFactory moduleFactory = new ModuleFactory(serviceProvider);
+            ModuleFactory moduleFactory = StartUp.Configure();
 
             while (true)
             {

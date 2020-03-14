@@ -7,7 +7,7 @@ using SequenceAnalysis;
 
 namespace UnitTests
 {
-    public class SequenceAnalysisTests
+    public class SequenceAnalysisServiceTests
     {
         [Theory]
         [InlineData("This IS a STRING", "GIINRSST")]

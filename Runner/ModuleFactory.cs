@@ -17,13 +17,16 @@ namespace Runner
 
         public IModule BuildModule(string opt)
         {
-            if (opt == "SequenceAnalysis")
+            var presenter =
+                (IPresenter)_serviceProvider.GetService(typeof(IPresenter));
+
+            if (opt == nameof(MenuOptionsEnum.SequenceAnalysis))
             {
                 var requiredService = 
                     (IFindUpperCaseWords)_serviceProvider.GetService(typeof(IFindUpperCaseWords));
-                return new SequenceAnalysisModule(requiredService);
+                return new SequenceAnalysisModule(requiredService, presenter);
             }
-            else if (opt == "SumOfMultiple")
+            else if (opt == nameof(MenuOptionsEnum.SumOfMultiple))
             {
                 var requiredService =
                     (IFindMultipleNumbersOf3Or5)_serviceProvider.GetService(typeof(IFindMultipleNumbersOf3Or5));
