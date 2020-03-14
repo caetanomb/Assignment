@@ -9,18 +9,21 @@ namespace Runner.Modules
     public class SumOfMultipleModule : IModule
     {
         private readonly IFindMultipleNumbersOf3Or5 _findMultipleNumbersOf3Or5;
-        public SumOfMultipleModule(IFindMultipleNumbersOf3Or5 findMultipleNumbersOf3Or5)
+        private readonly IPresenter _presentation;
+        public SumOfMultipleModule(IFindMultipleNumbersOf3Or5 findMultipleNumbersOf3Or5,
+            IPresenter presentation)
         {
             _findMultipleNumbersOf3Or5 = findMultipleNumbersOf3Or5;
+            _presentation = presentation;
         }
 
         public void Execute()
         {
-            Console.WriteLine("Informe a limit");
+            _presentation.ShowText("Informe a limit");
 
-            if (!long.TryParse(Console.ReadLine(), out var limit))
+            if (!long.TryParse(_presentation.FetchInput(), out var limit))
             {
-                Console.WriteLine("WARNING - Invalid value");
+                _presentation.ShowText("WARNING - Invalid value");
                 return;
             }
 
@@ -29,7 +32,7 @@ namespace Runner.Modules
                 .Handle(limit)
                 .Sum();
 
-            Console.WriteLine($"Output: {result}");
+            _presentation.ShowText($"Output: {result}");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Runner
             {
                 var requiredService =
                     (IFindMultipleNumbersOf3Or5)_serviceProvider.GetService(typeof(IFindMultipleNumbersOf3Or5));
-                return new SumOfMultipleModule(requiredService);
+                return new SumOfMultipleModule(requiredService, presenter);
             }
 
             throw new InvalidOperationException("Module does not exist");
