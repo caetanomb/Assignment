@@ -1,7 +1,6 @@
-﻿using Application;
-using SequenceAnalysis;
+﻿using SequenceAnalysis;
 
-namespace Runner.Modules
+namespace Application.Modules
 {
     public class SequenceAnalysisModule : IModule
     {

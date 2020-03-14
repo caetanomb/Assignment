@@ -1,10 +1,6 @@
-﻿using Application;
-using SumOfMultiple;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SumOfMultiple;
 
-namespace Runner.Modules
+namespace Application.Modules
 {
     public class SumOfMultipleModule : IModule
     {

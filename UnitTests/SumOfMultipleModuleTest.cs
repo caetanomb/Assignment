@@ -1,12 +1,8 @@
-﻿using Application.Interfaces.SequenceAnalysis;
+﻿using Application;
 using Application.Interfaces.SumOfMultiple;
+using Application.Modules;
 using Moq;
-using Runner;
-using Runner.Modules;
 using SumOfMultiple;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace UnitTests

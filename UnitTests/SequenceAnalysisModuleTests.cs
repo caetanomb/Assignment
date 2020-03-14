@@ -1,12 +1,8 @@
-﻿using Application.Interfaces.SequenceAnalysis;
+﻿using Application;
+using Application.Interfaces.SequenceAnalysis;
+using Application.Modules;
 using Moq;
-using Runner;
-using Runner.Modules;
 using SequenceAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Xunit;
 
 namespace UnitTests

@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Application;
+using Microsoft.Extensions.DependencyInjection;
 using SequenceAnalysis;
 using SumOfMultiple;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Runner
 {
@@ -22,7 +21,9 @@ namespace Runner
 
         public static ModuleFactory Configure()
         {
+            //Services
             var serviceProvider = StartUp.ConfigureServices();
+            //Factory
             ModuleFactory moduleFactory = new ModuleFactory(serviceProvider);
 
             return moduleFactory;

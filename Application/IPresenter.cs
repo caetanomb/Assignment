@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Runner
+namespace Application
 {
     public interface IPresenter
     {

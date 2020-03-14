@@ -1,5 +1,5 @@
 ﻿using Application;
-using Runner.Modules;
+using Application.Modules;
 using SequenceAnalysis;
 using SumOfMultiple;
 using System;
